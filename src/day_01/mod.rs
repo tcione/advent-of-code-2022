@@ -1,7 +1,9 @@
 use std::fs;
+use std::path::Path;
 
 fn elven_cals() -> Vec<i32> {
-    let content = fs::read_to_string("./input.txt").expect("Not able to read input");
+    let input = Path::new("./day_01/input.txt");
+    let content = fs::read_to_string(input).expect("Not able to read input");
 
     let mut groups =
         content
